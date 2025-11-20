@@ -1,0 +1,11 @@
+{
+  "name": "武笠 峻大",
+  "title": "フロントエンドエンジニア / フルスタックエンジニア",
+  "description": "React/Next.jsを中心としたWebアプリケーション開発を行っています。ユーザー体験を重視した開発を心がけています。",
+  "profileImage": "/icon.jpeg",
+  "socialLinks": {
+    "github": "https://github.com/focta",
+    "twitter": "https://twitter.com/sykt_tkhrm",
+    "email": "mailto:your-email@example.com"
+  }
+}
