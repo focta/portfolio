@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 概要
 
-## Getting Started
+自己紹介に利用するポートフォリオサイトです。
+ローカルに構築いただいて確認することもできます！
 
-First, run the development server:
+## アプリの起動
+
+本プロジェクトの開発時には Bun を使用したため、Bun によるアプリの起動が可能です。
+
+### 必要な環境
+
+- Bun (最新版推奨)
+- Node.js 18 以上（Bun の動作要件）
+
+### 起動方法
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# 依存関係のインストール
+bun install
+
+# 開発サーバーの起動
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ローカルでの起動後は[http://localhost:3000](http://localhost:3000)をブラウザにてご確認ください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### その他のコマンド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# プロダクションビルド
+bun run build
 
-## Learn More
+# プロダクションサーバーの起動
+bun run start
 
-To learn more about Next.js, take a look at the following resources:
+# リントの実行
+bun run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# アプリ概要説明
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+本ポートフォリオサイトは、1 ページスクロール型の構成で以下のセクションを実装予定です。
 
-## Deploy on Vercel
+## 実装済みセクション
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Hero セクション
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- PC/SP の両方でのファーストビューを構成している部分
+- 名前、タイトル、自己紹介文、SNS リンク（GitHub、Twitter、Email）を表示
+- レスポンシブデザインとダークモードに対応
+
+## 実装予定セクション
+
+- **About Me**: 詳細な自己紹介と興味・関心事
+- **Skills**: 技術スタックをフロントエンド/バックエンドでカテゴリ分けして表示
+- **Projects**: 関わった開発案件をカード形式で表示（名前、概要、技術タグ、期間）
+- **Career**: キャリア履歴をタイムライン形式で表示（役職、期間、業務内容、成果）
+
+# 技術スタック
+
+## フレームワーク・ライブラリ
+
+- **Next.js 16.0.3** - React フレームワーク（App Router 使用）
+- **React 19.2.0** - UI ライブラリ
+- **TypeScript 5** - 型安全性のための言語
+
+## スタイリング
+
+- **Tailwind CSS v4** - ユーティリティファーストの CSS フレームワーク
+- ダークモード対応（`prefers-color-scheme`を使用）
+
+## 開発環境・ツール
+
+- **Bun** - パッケージマネージャー・ランタイム
+- **ESLint** - コード品質チェック
+- **Next.js ESLint Config** - Next.js 用の ESLint 設定
+
+## アーキテクチャ
+
+- **App Router** - Next.js の最新ルーティングシステム
+- **コンポーネントベース設計** - 再利用可能なコンポーネント構成
+- **型定義の分離** - `types/index.ts`で型定義を一元管理
+- **データの分離** - JSON ファイルでデータを管理（将来的に Supabase/API への移行を想定）
+
+## パスエイリアス
+
+- `@/*` - プロジェクトルートを参照するパスエイリアスを設定
+
+## 特徴
+
+- **型安全性**: TypeScript による厳密な型チェック
+- **パフォーマンス**: Next.js の自動最適化機能を活用
+- **レスポンシブ**: モバイル・タブレット・デスクトップに対応
+- **アクセシビリティ**: 適切な aria-label などの実装
+- **メンテナンス性**: コンポーネントとデータの分離による保守性の向上
