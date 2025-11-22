@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HeroData } from "@/types";
 import heroData from "@/data/hero.json";
 
@@ -55,19 +54,6 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center px-4 py-16 bg-white dark:bg-black">
       <div className="max-w-4xl w-full mx-auto">
         <div className="flex flex-col items-center text-center space-y-8">
-          {/* プロフィール画像 */}
-          {data.profileImage && (
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-800 shadow-lg">
-              <Image
-                src={data.profileImage}
-                alt={data.name}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
-
           {/* 名前とタイトル */}
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
