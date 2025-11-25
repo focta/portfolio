@@ -11,6 +11,13 @@ export interface HeroData {
   };
 }
 
+// About Me Section
+export interface AboutMeData {
+  bio: string;
+  interests: string[];
+  values?: string[];
+}
+
 // Skills Section (後で使用)
 export interface Skill {
   name: string;
