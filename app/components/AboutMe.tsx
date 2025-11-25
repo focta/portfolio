@@ -32,9 +32,9 @@ export default function AboutMe() {
               興味・関心事
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {data.interests.map((interest, index) => (
+              {data.interests.map((interest) => (
                 <li
-                  key={index}
+                  key={interest}
                   className="flex items-start space-x-3 text-gray-700 dark:text-gray-300"
                 >
                   <span className="text-gray-900 dark:text-white mt-1.5">
@@ -53,9 +53,9 @@ export default function AboutMe() {
                 大切にしていること
               </h3>
               <div className="flex flex-wrap gap-3">
-                {data.values.map((value, index) => (
+                {data.values.map((value) => (
                   <span
-                    key={index}
+                    key={value}
                     className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm md:text-base border border-gray-200 dark:border-gray-800"
                   >
                     {value}
