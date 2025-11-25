@@ -1,0 +1,45 @@
+{
+  "skills": [
+    {
+      "name": "React",
+      "category": "frontend",
+      "level": 5
+    },
+    {
+      "name": "Next.js",
+      "category": "frontend",
+      "level": 4
+    },
+    {
+      "name": "TypeScript",
+      "category": "frontend",
+      "level": 5
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "frontend",
+      "level": 4
+    },
+    {
+      "name": "Node.js",
+      "category": "backend",
+      "level": 5
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "backend",
+      "level": 4
+    },
+    {
+      "name": "Git",
+      "category": "tool",
+      "level": 5
+    },
+    {
+      "name": "Docker",
+      "category": "tool",
+      "level": 3
+    }
+  ]
+}
+
