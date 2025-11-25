@@ -51,7 +51,10 @@ export default function Hero() {
   const data = heroData as HeroData;
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-16 bg-white dark:bg-black">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-4 py-16 bg-white dark:bg-black"
+    >
       <div className="max-w-4xl w-full mx-auto">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* 名前とタイトル */}
