@@ -20,8 +20,9 @@ const categoryOrder: Array<"frontend" | "backend" | "tool" | "other"> = [
 // レベルを星で表示するコンポーネント
 const LevelStars = ({ level }: { level: number }) => {
   const maxLevel = 5;
-  const filledStars = level;
-  const emptyStars = maxLevel - level;
+  const clampedLevel = Math.max(0, Math.min(maxLevel, level));
+  const filledStars = clampedLevel;
+  const emptyStars = maxLevel - clampedLevel;
 
   return (
     <div className="flex items-center gap-1">
