@@ -44,9 +44,7 @@ export default function Skills() {
 
   // カテゴリごとにスキルをグループ化
   const skillsByCategory = categoryOrder.reduce((acc, category) => {
-    acc[category] = data.skills.filter(
-      (skill) => skill.category === category
-    );
+    acc[category] = data.skills.filter((skill) => skill.category === category);
     return acc;
   }, {} as Record<string, typeof data.skills>);
 
@@ -87,9 +85,7 @@ export default function Skills() {
                             {skill.name}
                           </span>
                         </div>
-                        {skill.level && (
-                          <LevelStars level={skill.level} />
-                        )}
+                        {skill.level && <LevelStars level={skill.level} />}
                       </div>
                     ))}
                   </div>
@@ -102,4 +98,3 @@ export default function Skills() {
     </section>
   );
 }
-
