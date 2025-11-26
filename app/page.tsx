@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
+import Career from "./components/Career";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Skills />
-      {/* 他のセクションは後で追加 */}
+      <Career />
     </main>
   );
 }
