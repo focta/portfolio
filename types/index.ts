@@ -18,11 +18,15 @@ export interface AboutMeData {
   values?: string[];
 }
 
-// Skills Section (後で使用)
+// Skills Section
 export interface Skill {
   name: string;
   category: "frontend" | "backend" | "tool" | "other";
   level?: number;
+}
+
+export interface SkillsData {
+  skills: Skill[];
 }
 
 // Projects Section (後で使用)
