@@ -25,7 +25,10 @@ const LevelStars = ({ level }: { level: number }) => {
   const emptyStars = maxLevel - clampedLevel;
 
   return (
-    <div className="flex items-center gap-1">
+    <div
+      className="flex items-center gap-1"
+      aria-label={`レベル ${clampedLevel} / ${maxLevel}`}
+    >
       {Array.from({ length: filledStars }).map((_, i) => (
         <span key={`filled-${i}`} className="text-yellow-500">
           ★
