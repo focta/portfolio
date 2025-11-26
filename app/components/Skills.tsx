@@ -84,7 +84,7 @@ export default function Skills() {
                         key={skill.name}
                         className="flex flex-col items-start p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800"
                       >
-                        <div className="flex items-center justify-between w-full mb-2">
+                        <div className="flex items-center w-full mb-2">
                           <span className="text-base md:text-lg font-medium text-gray-900 dark:text-white">
                             {skill.name}
                           </span>
