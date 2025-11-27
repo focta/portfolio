@@ -56,19 +56,9 @@ export interface Career {
   };
   description: string;
   achievements?: string[];
-  projects?: {
-    name: string;
-    description: string;
-    technologies: string[];
-    period?: {
-      start: string;
-      end?: string;
-    };
-    links?: {
-      github?: string;
-      demo?: string;
-    };
-  }[];
+  projects?: (Omit<Project, "id" | "period"> & {
+    period?: Project["period"];
+  })[];
 }
 
 export interface CareerData {
