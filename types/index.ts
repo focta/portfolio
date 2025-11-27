@@ -45,15 +45,22 @@ export interface Project {
   };
 }
 
-// Career Section (後で使用)
+// Career Section
 export interface Career {
   id: string;
   role: string;
+  company?: string;
   period: {
     start: string;
     end?: string;
   };
   description: string;
   achievements?: string[];
+  projects?: (Omit<Project, "id" | "period"> & {
+    period?: Project["period"];
+  })[];
 }
 
+export interface CareerData {
+  careers: Career[];
+}
