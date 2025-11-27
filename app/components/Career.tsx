@@ -28,7 +28,10 @@ const ProjectItem = ({
   careerId: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const projectId = `${careerId}-project-${project.name}`;
+  const projectId = `${careerId}-project-${project.name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")}`;
 
   return (
     <div className="border border-gray-200 dark:border-gray-800 rounded-lg">
