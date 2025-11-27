@@ -116,8 +116,8 @@ export default function Career() {
 
   // 古い順（時系列順）でソート
   const sortedCareers = [...data.careers].sort((a, b) => {
-    const dateA = new Date(a.period.start).getTime();
-    const dateB = new Date(b.period.start).getTime();
+    const dateA = new Date(a.period.start + "-01").getTime();
+    const dateB = new Date(b.period.start + "-01").getTime();
     return dateA - dateB;
   });
 
