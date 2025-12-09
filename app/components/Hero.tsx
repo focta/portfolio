@@ -1,5 +1,7 @@
+'use client';
 import { HeroData } from "@/types";
 import heroData from "@/data/hero.json";
+import { motion } from "motion/react";
 
 // GitHubアイコン
 const GitHubIcon = () => (
@@ -51,7 +53,10 @@ export default function Hero() {
   const data = heroData as HeroData;
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
       id="hero"
       className="min-h-screen flex items-center justify-center px-4 py-16 bg-white dark:bg-black"
     >
@@ -108,6 +113,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
