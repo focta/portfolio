@@ -90,9 +90,9 @@ export default function Hero() {
                 <GitHubIcon />
               </a>
             )}
-            {data.socialLinks.twitter && (
+            {data.socialLinks.x && (
               <a
-                href={data.socialLinks.twitter}
+                href={data.socialLinks.x}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"

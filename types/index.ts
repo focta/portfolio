@@ -6,7 +6,7 @@ export interface HeroData {
   profileImage?: string;
   socialLinks: {
     github?: string;
-    twitter?: string;
+    x?: string;
     email?: string;
   };
 }
